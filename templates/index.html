@@ -8,7 +8,7 @@
             href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
             rel="stylesheet"
         />
-        <title>PREDIKSI KEPUASAN PEMBELAJARAN JARAK JAUH DI PENDIDIKAN TINGGI SELAMA MASA PANDEMI COVID-19</title>
+        <title>APP DEEP LEARNING</title>
     </head>
     <body
         class="h-100 d-flex flex-row justify-content-center align-items-center             
@@ -17,275 +17,76 @@
             bg-gradient-to-r
             from-red-400
             to-blue-500
-            text-gray-800
- "
-    >
+            text-gray-800">
         <div class="d-flex flex-column justify-around bg-white p-16 rounded-lg mt-8">
-            <h3 class="badge bg-primary align-self-start flex-column text-3xl font-bold mb-8">
-	    PREDIKSI KEPUASAN PEMBELAJARAN JARAK JAUH DI PENDIDIKAN TINGGI SELAMA MASA PANDEMI COVID-19 </h3>
+            <h3 class="badge bg-primary align-self-start flex-column text-3xl font-bold mb-8">PREDIKSI PASIEN TERKENA DBD</h3>
 	    
-            <h3 class="text-2xl font-bold mb-8"> Oleh : Kelompok 2 Kelas UG1 </h3>
-	    <h3 > 1. Fajar Astuti Hermawati</h3>
-            <h3 > 2. Enny Indasyah</h3>
-            <h3 > 3. Toni Wijanarko Adi Putra</h3>	
+            <h3 class="text-2xl font-bold mb-8">Oleh : Kelompok 03 Kelas S</h3>
+	        <h3> 1. Mohammad Rochman Liulin Nuha(1462100230)</h3>
+            <h3 > 2. Ahmad Umar Farisi(1462100079)</h3>
+            <h3 > 3. Ade Kholik Prasetya(1462100067)</h3>
+            <h3 > 4. Muhammad Syahrul Gunawan(1462100009)</h3>
 	</div>
 	<div class="flex justify-around bg-white p-16 rounded-lg mt-8">
-	<h3 class="badge bg-primary align-self-start flex-fill text-2xl font-bold mb-8">
-	<form
-                action="{{ url_for('predict') }}"
-                method="post"
-                class="flex flex-col"
-            >
-		<h3>Silahkan masukkan data anda:</h3>
-		<label for="tahun" class="mt-4 mb-2"
-                    >Sekarang anda adalah mahasiswa tahun ke:</label
-                >
-			<select name= "tahun"
-				id="tahun"
-				class="p-4 bg-gray-100 rounded-md"
-			>
-			 <option value= "Tahun ke-1">Tahun ke-1</option>
-			 <option value= "Tahun ke-2">Tahun ke-2</option>
-			 <option value= "Tahun ke-3">Tahun ke-3</option>
-			  <option value= "Tahun ke-4 atau lebih">Tahun ke-4 atau lebih</option>
-			  </select>
-			  
-			<label for="jeniskelamin" class="mt-4 mb-2">Jenis Kelamin:</label>
-			<select name= "jeniskelamin"
-						id="jeniskelamin"
-						class="p-4 bg-gray-100 rounded-md"
-			>
-			 <option value= "Laki-laki">Laki-laki</option>
-			 <option value= "Perempuan">Perempuan</option>
-			   </select>
-			   
-			   <label for="fasilitas" class="mt-4 mb-2">Anda memiliki fasilitas pembelajaran berupa laptop dan wifi:</label>
-			<select name= "fasilitas"
-						id="fasilitas"
-						class="p-4 bg-gray-100 rounded-md"
-			>
-			 <option value= "ya">Ya</option>
-			 <option value= "tidak">Tidak</option>
-			   </select>
-                <label for="Q15" class="mt-4 mb-2"
-                    >Materi pembelajaran online (Zoom/Team/video) memudahkan pembelajaran saya:</label
-                >
-                <select
-                    name="Q15"
-                    id="Q15"
-                    class="p-4 bg-gray-100 rounded-md"
-                >
-                    <option value="1">Sangat Tidak Setuju</option>
-                    <option value="2">Tidak Setuju</option>
-		            <option value="3">Agak Tidak Setuju</option>
-                    <option value="4">Netral</option>
-		            <option value="5">Agak Setuju</option>
-                    <option value="6">Setuju</option>
-		            <option value="7">Sangat Setuju</option>
-                </select>
+        <h3 class="badge bg-primary align-self-start flex-fill text-2xl font-bold mb-8">
+        <form action="/predict" method="post" class="flex flex-col">
+            <h3>Silahkan masukkan data:</h3>
+            <label for="Gender" class="mt-4 mb-2">Gender</label>
+            <input type="text" name="Gender" id="Gender" class="p-4 bg-gray-100 rounded-md">
+            <label for="Age" class="mt-4 mb-2">Age</label>
+            <input type="text" name="Age" id="Age" class="p-4 bg-gray-100 rounded-md">
+            <label for="NS1" class="mt-4 mb-2">NS1</label>
+            <input type="text" name="NS1" id="NS1" class="p-4 bg-gray-100 rounded-md">
+            <label for="IgG" class="mt-4 mb-2">IgG</label>
+            <input type="text" name="IgG" id="IgG" class="p-4 bg-gray-100 rounded-md">
+            <label for="IgM" class="mt-4 mb-2">IgM</label>
+            <input type="text" name="IgM" id="IgM" class="p-4 bg-gray-100 rounded-md">
+            <label for="Area" class="mt-4 mb-2">Area</label>
+            <input type="text" name="Area" id="Area" class="p-4 bg-gray-100 rounded-md">
+            <label for="AreaType" class="mt-4 mb-2">AreaType</label>
+            <input type="text" name="AreaType" id="AreaType" class="p-4 bg-gray-100 rounded-md">
+            <label for="HouseType" class="mt-4 mb-2">HouseType</label>
+            <input type="text" name="HouseType" id="HouseType" class="p-4 bg-gray-100 rounded-md">
+            <label for="District" class="mt-4 mb-2">District</label>
+            <input type="text" name="District" id="District" class="p-4 bg-gray-100 rounded-md">
 
-                <label for="Q12" class="mt-4 mb-2"
-                    >Saya selalu dapat fokus atau memperhatikan instruksi atau aktivitas jarak jauh:</label
+            <button
+                type="submit"
+                class="
+                    flex
+                    justify-center
+                    align-center
+                    mt-8
+                    p-4
+                    bg-gradient-to-r
+                    from-blue-400
+                    to-red-500
+                    text-white
+                    rounded-md
+                ">
+                PREDIKSI SEKARANG
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="feather feather-arrow-right ml-4"
                 >
-                <select
-                    name="Q12"
-                    id="Q12"
-                    class="p-4 bg-gray-100 rounded-md"
-                >
-                    <option value="1">Sangat Tidak Setuju</option>
-                    <option value="2">Tidak Setuju</option>
-		            <option value="3">Agak Tidak Setuju</option>
-                    <option value="4">Netral</option>
-		             <option value="5">Agak Setuju</option>
-                    <option value="6">Setuju</option>
-		            <option value="7">Sangat Setuju</option>
-                </select>
-                <label for="Q11" class="mt-4 mb-2"
-                    >Saya merasa bahwa pelajaran atau kegiatan kuliah saya telah disampaikan dengan baik di lingkungan online:</label
-                >
-                <select
-                    name="Q11"
-                    id="Q11"
-                    class="p-4 bg-gray-100 rounded-md"
-                >
-                    <option value="1">Sangat Tidak Setuju</option>
-                    <option value="2">Tidak Setuju</option>
-		            <option value="3">Agak Tidak Setuju</option>
-                    <option value="4">Netral</option>
-		            <option value="5">Agak Setuju</option>
-                    <option value="6">Setuju</option>
-		            <option value="7">Sangat Setuju</option>
-                </select>
-                <label for="Q16" class="mt-4 mb-2"
-                    >Metode penilaian yang disesuaikan/dimodifikasi dalam masa transisi ini sesuai untuk mengevaluasi pencapaian hasil belajar yang saya maksudkan:</label
-                >
-                <select
-                    name="Q16"
-                    id="Q16"
-                    class="p-4 bg-gray-100 rounded-md"
-                >
-                    <option value="1">Sangat Tidak Setuju</option>
-                    <option value="2">Tidak Setuju</option>
-		            <option value="3">Agak Tidak Setuju</option>
-                    <option value="4">Netral</option>
-		            <option value="5">Agak Setuju</option>
-                    <option value="6">Setuju</option>
-		            <option value="7">Sangat Setuju</option>
-                </select>
-		<label for="Q7" class="mt-4 mb-2"
-                    >Saya selalu dapat menemukan waktu untuk berpartisipasi dalam kelas sinkron(mis., kuliah streaming langsung atau konferensi video pada waktu yang ditentukan):</label
-                >
-                <select
-                    name="Q7"
-                    id="Q7"
-                    class="p-4 bg-gray-100 rounded-md"
-                >
-                    <option value="1">Sangat Tidak Setuju</option>
-                    <option value="2">Tidak Setuju</option>
-		            <option value="3">Agak Tidak Setuju</option>
-                    <option value="4">Netral</option>
-		            <option value="5">Agak Setuju</option>
-                    <option value="6">Setuju</option>
-		            <option value="7">Sangat Setuju</option>
-                </select>
-		<label for="Q20" class="mt-4 mb-2"
-                    >Selama masa transisi program ini, saran dan komentar mahasiswa didengarkan dan ditindaklanjuti dengan tepat:</label
-                >
-                <select
-                    name="Q20"
-                    id="Q20"
-                    class="p-4 bg-gray-100 rounded-md"
-                >
-                    <option value="1">Sangat Tidak Setuju</option>
-                    <option value="2">Tidak Setuju</option>
-		            <option value="3">Agak Tidak Setuju</option>
-                    <option value="4">Netral</option>
-		            <option value="5">Agak Setuju</option>
-                    <option value="6">Setuju</option>
-		            <option value="7">Sangat Setuju</option>
-                </select>
-		<label for="Q18" class="mt-4 mb-2"
-                    >Penilaian yang disesuaikan /dimodifikasi efektif dalam membantu saya belajar:</label
-                >
-                <select
-                    name="Q18"
-                    id="Q18"
-                    class="p-4 bg-gray-100 rounded-md"
-                >
-                    <option value="1">Sangat Tidak Setuju</option>
-                    <option value="2">Tidak Setuju</option>
-		            <option value="3">Agak Tidak Setuju</option>
-                    <option value="4">Netral</option>
-		            <option value="5">Agak Setuju</option>
-                    <option value="6">Setuju</option>
-		            <option value="7">Sangat Setuju</option>
-                </select>
-		<label for="Q9" class="mt-4 mb-2"
-                    >Saya selalu dapat menemukan waktu untuk pertemuan dan jadwal kelas:</label
-                >
-                <select
-                    name="Q9"
-                    id="Q9"
-                    class="p-4 bg-gray-100 rounded-md"
-                >
-                    <option value="1">Sangat Tidak Setuju</option>
-                    <option value="2">Tidak Setuju</option>
-		            <option value="3">Agak Tidak Setuju</option>
-                    <option value="4">Netral</option>
-		            <option value="5">Agak Setuju</option>
-                    <option value="6">Setuju</option>
-		            <option value="7">Sangat Setuju</option>
-                </select>
-		<label for="Q10" class="mt-4 mb-2"
-                    >Saya lebih suka belajar tatap muka :</label
-                >
-                <select
-                    name="Q10"
-                    id="Q10"
-                    class="p-4 bg-gray-100 rounded-md"
-                >
-                    <option value="1">Sangat Tidak Setuju</option>
-                    <option value="2">Tidak Setuju</option>
-		            <option value="3">Agak Tidak Setuju</option>
-                    <option value="4">Netral</option>
-		            <option value="5">Agak Setuju</option>
-                    <option value="6">Setuju</option>
-		            <option value="7">Sangat Setuju</option>
-                </select>
-		<label for="Q13" class="mt-4 mb-2"
-                    >Secara umum, dosen saya tersedia atau responsif:</label
-                >
-                <select
-                    name="Q13"
-                    id="Q13"
-                    class="p-4 bg-gray-100 rounded-md"
-                >
-                    <option value="1">Sangat Tidak Setuju</option>
-                    <option value="2">Tidak Setuju</option>
-		            <option value="3">Agak Tidak Setuju</option>
-                    <option value="4">Netral</option>
-		            <option value="5">Agak Setuju</option>
-                    <option value="6">Setuju</option>
-		            <option value="7">Sangat Setuju</option>
-                </select>
-                <button
-                    type="submit"
-                    class="
-                        flex
-                        justify-center
-                        align-center
-                        mt-8
-                        p-4
-                        bg-gradient-to-r
-                        from-blue-400
-                        to-red-500
-                        text-white
-                        rounded-md
-                    "
-                >
-                    PREDIKSI SEKARANG
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-arrow-right ml-4"
-                    >
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                </button>
-            </form></h3>
-        </div>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+        </form></h3>
+    </div>
         
         <div class="d-flex flex-column justify-around bg-white p-16 rounded-lg mt-8">
-            <h3 class="badge bg-primary align-self-start flex-column text-3xl font-bold mb-8">
-	    Estimasi tingkat kepuasan Anda dalam pembelajaran jarak jauh adalah : </h3>
+            <h3 class="badge bg-primary align-self-start flex-column text-3xl font-bold mb-8">Prediksi : </h3>
             <h2 class="text-5xl font-bold"> {{ output }}</h2>    
-           
-                <h3 class="mt-8">Dimana diketahui anda adalah : 
-                    <p>Mahasiswa : {{ tahun }}</p>
-                    <p>Jenis kelamin: {{ jeniskelamin }}</p>
-                    <p>Anda memiliki laptop (sarana pembelajaran lainnya): {{ fasilitas }}</p>
-                </h3>
-                <h3 class="mt-8">Dengan pengisian quisioner anda sebagai berikut : 
-                    <p>Materi pembelajaran online (Zoom/Team/video) memudahkan pembelajaran saya: {{ Q15 }}</p>
-                    <p>Saya selalu dapat fokus atau memperhatikan instruksi atau aktivitas jarak jauh: {{ Q12 }}</p>
-                    <p>Saya merasa bahwa pelajaran atau kegiatan kuliah saya telah disampaikan dengan baik di lingkungan online: {{ Q11 }}</p>
-                    <p>Metode penilaian yang disesuaikan/dimodifikasi dalam masa transisi ini sesuai untuk mengevaluasi pencapaian hasil belajar yang saya maksudkan: {{ Q16 }}</p>
-                    <p>Saya selalu dapat menemukan waktu untuk berpartisipasi dalam kelas sinkron(mis., kuliah streaming langsung atau konferensi video pada waktu yang ditentukan): {{ Q7 }}</p>
-                    <p>Selama masa transisi program ini, saran dan komentar mahasiswa didengarkan dan ditindaklanjuti dengan tepat: {{ Q20 }}</p>
-                    <p>Penilaian yang disesuaikan /dimodifikasi efektif dalam membantu saya belajar: {{ Q18 }}</p>
-                    <p>Saya selalu dapat menemukan waktu untuk pertemuan dan jadwal kelas: {{ Q9 }}</p>
-                    <p>Saya lebih suka belajar tatap muka: {{ Q10 }}</p>
-                    <p>Secara umum, dosen saya tersedia atau responsif: {{ Q13 }}</p>
-
-                </h3>               
 	</div>
             <div class="flex justify-around bg-white p-16 rounded-lg mt-8">
                 <img
